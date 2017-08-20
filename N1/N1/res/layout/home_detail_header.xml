@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.lequan.n1.view.ObservableScrollView
+   	 xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/slv_home_detail_header"
+        android:layout_width="match_parent"
+        android:layout_height="220dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_homedetails"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:onClick="onImgClick" >
+            </android.support.v4.view.ViewPager>
+
+            <RelativeLayout
+                android:id="@+id/layout1"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="-80dp"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/home_lv_normal_bg" >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tv_homedetails_personnum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginRight="10dp"
+                            android:text="256"
+                            android:textColor="@color/white" />
+
+                        <ImageView
+                            android:id="@+id/iv_homedetails_person"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="5dp"
+                            android:layout_toLeftOf="@+id/tv_homedetails_personnum"
+                            android:src="@drawable/home_lv_normal_ren" />
+
+                        <ImageView
+                            android:id="@+id/iv_homedetails_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="5dp"
+                            android:layout_toLeftOf="@+id/tv_homedetails_imagenum"
+                            android:src="@drawable/home_lv_item_tupian" />
+
+                        <TextView
+                            android:id="@+id/tv_homedetails_days"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="10dp"
+                            android:text="倒计时："
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/tv_homedetails_taskname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/tv_homedetails_days"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="10dp"
+                            android:text="N1年度摄影大赛"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/tv_homedetails_taskname"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="10dp"
+                            android:text="任务"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/tv_homedetails_imagenum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_toLeftOf="@+id/iv_homedetails_person"
+                            android:text="512"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/tv_homedetails_money"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="20dp"
+                            android:background="@drawable/home_lv_normal_jiangquan"
+                            android:gravity="center"
+                            android:text="￥9999"
+                            android:textColor="@color/white" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_homedetails_points"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="bottom|center"
+                        android:orientation="horizontal" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/linear1"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_below="@+id/layout1"
+                android:orientation="vertical"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="参赛规则" />
+
+                <TextView
+                    android:id="@+id/tv_longlonglong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="2"
+                    android:textSize="15sp"
+                    android:text="这些都是 测试测试数据这些都是 测试测试数据这些都是 这些都是 测试测试都是 测试测试数据这些都是" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="7dp"
+                    android:layout_height="wrap_content" >
+
+                    <Button
+                        android:id="@+id/bt_viewdetails"
+                        android:layout_width="60dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@color/red"
+                        android:text="查看详情"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/circle_greed_shape" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/view1"
+                        android:text="开放征集中，活动开始审查"
+                        android:textColor="@color/gray" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_home_homedetails"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:text="首页" />
+
+                    <TextView
+                        android:id="@+id/tv_time_homedetails"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="@color/gray"
+                        android:text="时间" />
+
+                    <TextView
+                        android:id="@+id/tv_prize_homedetails"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="@color/gray"
+                        android:text="获奖" />
+
+                    <TextView
+                        android:id="@+id/tv_contribute_homedetails"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/gray"
+                        android:gravity="center"
+                        android:text="我的投稿" />
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:visibility="gone" />
+        </LinearLayout>
+    </com.lequan.n1.view.ObservableScrollView>

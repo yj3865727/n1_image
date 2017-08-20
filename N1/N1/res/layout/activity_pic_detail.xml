@@ -1,0 +1,312 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pic_rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+    <View
+        android:id="@+id/pic_viewMask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="#20000000"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/pic_detail_title_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/pink" >
+
+        <ImageView
+            android:id="@+id/pic_detail_back_img"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/fanhui2x" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/pic_detail"
+            android:textColor="#FBFBFB"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/pic_detail_report_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:clickable="true"
+            android:text="..."
+            android:textColor="#FBFBFB"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+    <com.lequan.n1.view.ReboundScrollView
+        android:id="@+id/pic_detail_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/pic_detail_title_rl"
+        android:layout_marginBottom="50dp"
+        android:background="#EBEBEB"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:padding="5dp" >
+
+            <com.lequan.n1.view.AutoScaleView
+                android:id="@+id/pic_detail_photo_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"        
+                android:visibility="gone" />
+            <!-- 图片内容 -->
+
+            <TextView
+                android:id="@+id/pic_detail_username_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pic_detail_photo_img"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_toLeftOf="@+id/pic_detail_head_img"
+                android:textColor="#555"
+                android:textSize="15dp"
+                android:visibility="gone" />
+            <!-- 用户名 -->
+
+            <com.lequan.n1.view.XCRoundRectImageView
+                android:id="@+id/pic_detail_head_img"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignBottom="@id/pic_detail_username_tv"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:clickable="true"
+                android:visibility="gone" />
+            <!-- 头像 -->
+
+            <HorizontalScrollView
+                android:id="@+id/pic_detail_photo_horiScroll"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@id/pic_detail_head_img"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:scrollbars="none"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:id="@+id/pic_detail_photo_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:orientation="horizontal" >
+                </LinearLayout>
+            </HorizontalScrollView>
+            <!-- 多张图片时的横向 scrollview -->
+
+            <TextView
+                android:id="@+id/pic_detail_photo_description_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pic_detail_photo_horiScroll"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="15dp"
+                android:text="描述内容"
+                android:visibility="gone" />
+            <!-- 对照片的介绍 -->
+
+            <RelativeLayout
+                android:id="@+id/pic_detail_praise_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pic_detail_photo_description_tv"
+                android:layout_marginTop="5dp" >
+
+                <View
+                    android:id="@+id/pic_line1"
+                    style="@style/bg_line" />
+                <!-- 分割线 -->
+
+                <RelativeLayout
+                    android:id="@+id/pic_detail_praise_rl_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:paddingBottom="5dp" >
+
+                    <!-- 点赞的列表项 -->
+
+                    <TextView
+                        android:id="@+id/pic_detail_theme_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:text="奇怪的自拍"
+                        android:textColor="#000000"
+                        android:textSize="15dp" />
+
+                    <ImageView
+                        android:id="@+id/pic_detail_praise_img1"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="45dp"
+                        android:clickable="true"
+                        android:src="@drawable/homepage_aixin3x" />
+                    <!-- 赞，图片1 -->
+
+                    <TextView
+                        android:id="@+id/pic_detail_praise_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/pic_detail_theme_tv"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="25dp"
+                        android:clickable="true"
+                        android:text="赞"
+                        android:textColor="#000000"
+                        android:textSize="15dp" />
+                    <!-- 赞 ，文字 -->
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/pic_detail_praisehead_rl_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/pic_detail_praise_rl_1" >
+
+                    <ImageView
+                        android:id="@+id/pic_detail_praise_img2"
+                        android:layout_width="20dp"
+                        android:layout_height="15dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/homepage_aixin3x" />
+                    <!-- 赞，图片2 -->
+
+                    <TextView
+                        android:id="@+id/pic_detail_praisenumber_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="28dp"
+                        android:text=" "
+                        android:textSize="15dp" />
+
+                    <HorizontalScrollView
+                        android:id="@+id/pic_detail_praisehead_scroll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@id/pic_detail_praisenumber_tv"
+                        android:layout_toRightOf="@id/pic_detail_praise_img2"
+                        android:clickable="true"
+                        android:scrollbars="none" >
+
+                        <LinearLayout
+                            android:id="@+id/pic_detail_praisehead_ll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:clickable="true"
+                            android:orientation="horizontal" >
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                    <!-- 点赞头像 -->
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/pic_deatil_comment_img"
+                    android:layout_width="20dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@id/pic_detail_praisehead_rl_2"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/pic_detail_comment3x"
+                    android:paddingBottom="5dp" />
+                <!-- 评论，图片 -->
+
+                <TextView
+                    android:id="@+id/pic_detail_commentcount_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/pic_deatil_comment_img"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/pic_deatil_comment_img"
+                    android:text="共有0条评论"
+                    android:textSize="15dp" />
+
+                <View
+                    android:id="@+id/pic_line2"
+                    style="@style/bg_line"
+                    android:layout_below="@id/pic_detail_commentcount_tv"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dp" />
+                <!-- 分割线 -->
+
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/pic_detail_comment_lv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pic_detail_praise_rl"
+                android:background="#F9F9F9"
+                android:scrollbars="none"
+                android:visibility="gone" >
+            </ListView>
+            <!-- 评论列表 -->
+        </RelativeLayout>
+    </com.lequan.n1.view.ReboundScrollView>
+
+    <LinearLayout
+        android:id="@+id/pic_detail_comment_save_rl"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/pink"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/pic_comment_content_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_weight="3"
+            android:background="@android:drawable/editbox_background_normal"
+            android:hint="说点什么吧" />
+
+        <Button
+            android:id="@+id/pic_comment_send_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/send_comment_btn"
+            android:text="发送"
+            android:textColor="@color/pink" />
+    </LinearLayout>
+
+</RelativeLayout>

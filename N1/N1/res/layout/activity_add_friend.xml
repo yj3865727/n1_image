@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/add_friend_title_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/pink" >
+
+        <ImageView
+            android:id="@+id/Praise_List_back_img"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/fanhui2x" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="添加朋友"
+            android:textColor="#FBFBFB"
+            android:textSize="18dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/add_friend_title_rl"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/et_add_friend_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@android:drawable/editbox_background_normal"
+            android:drawableLeft="@drawable/friend_search"
+            android:drawablePadding="5dp"
+            android:hint="搜索ID号/昵称"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColorHint="@android:color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="推荐好友"
+            android:textSize="16sp" />
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/rlv_add_friend"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#000000" />
+    </LinearLayout>
+
+</RelativeLayout>

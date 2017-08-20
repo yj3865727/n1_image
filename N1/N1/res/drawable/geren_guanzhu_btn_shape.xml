@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+
+	<item 
+	    android:state_selected="true">
+	    <shape>
+     	<!-- 边角的圆弧半径 -->
+    		<corners android:radius="5dp" />
+    	<!-- 实心填充 -->
+   			 <solid android:color="#ff0000" />  
+   		<!-- 描边：一般大小都是1dp -->
+    		<stroke
+        		android:width="1dp"
+        		android:color="#ff0000" />
+    		<padding 
+    		    android:left="5dp"
+    		    android:right="5dp"/>
+		</shape>
+	</item>
+	    <item >
+        <shape>
+     	<!-- 边角的圆弧半径 -->
+    		<corners android:radius="5dp" />
+    	<!-- 实心填充 -->
+    		<solid android:color="#D9D9D9" />  
+    	<!-- 描边：一般大小都是1dp -->
+    		<stroke
+     		   android:width="1dp"
+     		   android:color="#D9D9D9" />
+		</shape>
+	</item>
+</selector>

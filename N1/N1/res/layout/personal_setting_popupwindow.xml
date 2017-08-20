@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#00000000"
+    style="@style/single_layout"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/pop_layout"
+        style="@style/wrap_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="match_parent"
+         android:layout_marginTop="10dp"
+         android:layout_marginBottom="10dp"
+         style="@style/usertext"
+         android:background="@null"
+         android:hint="选择性别"
+         android:layout_gravity="center" />
+		<View   style="@style/bg_line" />
+    <Button
+        android:id="@+id/set_man"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/usertext"
+        android:background="@null"
+        android:text="男" 
+        android:textColor="@color/blue"/>
+    <View   style="@style/bg_line" />
+
+    <Button
+        android:id="@+id/set_woman"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/usertext"
+        android:background="@null"
+        android:textColor="@color/blue"
+        android:text="女" />
+    </LinearLayout>
+      <LinearLayout
+            style="@style/wrap_layout"
+            android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/set_cancel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/usertext"
+        android:background="@null"
+        android:textColor="@color/blue"
+        android:text="取消" />
+    </LinearLayout>
+    
+
+</LinearLayout>

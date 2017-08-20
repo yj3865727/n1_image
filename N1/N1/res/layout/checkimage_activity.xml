@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@color/pink" >
+
+        <ImageView
+            android:id="@+id/iv_checkimage_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/fanhui2x" />
+
+        <TextView
+            android:id="@+id/tv_checkimage_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="1 of 1"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_checkimage_activity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal" >
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#5555" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:background="@drawable/friend_bg_color">
+
+        <ImageView
+            android:id="@+id/friend_time_img"
+            android:layout_width="12dp"
+            android:layout_height="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/friend_shijian" />
+        
+        
+ <com.lequan.n1.view.XCRoundRectImageView
+            android:id="@+id/friend_photo_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/friend_time_img"
+            android:layout_marginTop="8dp"
+            android:clickable="true"/>
+        <!-- 照片 -->
+
+        <TextView
+            android:id="@+id/friend_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/friend_time_img"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@+id/friend_time_img"
+            android:text="1天前"
+            android:textColor="#ffffff"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/friend_username_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/friend_touxiang_img"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@+id/friend_touxiang_img"
+            android:text="灵灵"
+            android:textColor="#ffffff"
+            android:textSize="10dp" />
+        <!-- 圆角，左下角主题 -->
+
+        <LinearLayout
+            android:id="@+id/friend_zhuti_ll"
+            style="@style/friend_layout"
+            android:layout_alignLeft="@+id/friend_time_img"
+            android:layout_below="@+id/friend_photo_img"
+            android:layout_marginTop="8dp"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/friend_zhuti_tv"
+                style="@style/zhuti"
+                android:text="编辑个人信息"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/friend_pinglun_ll"
+            style="@style/friend_layout"
+            android:layout_alignBottom="@id/friend_zhuti_ll"
+            android:layout_alignRight="@id/friend_username_tv"
+            android:layout_alignTop="@id/friend_zhuti_ll"
+            android:clickable="true" >
+
+            <!-- 评论 -->
+
+            <ImageView
+                android:id="@+id/friend_pinglun_img"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:src="@drawable/friend_pinglun" />
+
+            <TextView
+                android:id="@+id/friend_pinglun_tv"
+                style="@style/zhuti"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="0"
+                android:textColor="#ffffff"
+                android:textSize="12dp" />
+        </LinearLayout>
+
+        <com.lequan.n1.view.XCRoundRectImageView
+            android:id="@+id/friend_touxiang_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/friend_time_tv"
+            android:layout_marginRight="20dp"
+            android:clickable="true"
+            android:src="@drawable/friend_touxiang" />
+        <!-- 头像 -->
+
+        <LinearLayout
+            android:id="@+id/friend_dianzan_ll"
+            style="@style/friend_layout"
+            android:layout_alignBottom="@id/friend_zhuti_ll"
+            android:layout_alignLeft="@+id/friend_touxiang_img"
+            android:layout_alignTop="@id/friend_zhuti_ll"
+            android:clickable="true" >
+
+            <!-- 点赞 -->
+
+            <ImageView
+                android:id="@+id/friend_zan_img"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:src="@drawable/friend_dianzan" />
+
+            <TextView
+                android:id="@+id/friend_zan_tv"
+                style="@style/zhuti"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="0"
+                android:textColor="#ffffff"
+                android:textSize="12dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_height="8dp"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/friend_zhuti_ll">
+        </LinearLayout>
+            
+
+    </RelativeLayout>
+
+</FrameLayout>

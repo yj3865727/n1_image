@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F3F6"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/set_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp" 
+        android:background="@color/pink" >
+
+        <ImageView
+            android:id="@+id/back_person"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:clickable="true"
+            android:src="@drawable/fanhui2x" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="设置"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <LinearLayout style="@style/wrap_layout" >
+
+        <!-- 全圆角 -->
+
+        <LinearLayout
+            android:id="@+id/set_info"
+            style="@style/single_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:clickable="true" >
+
+            <TextView
+                style="@style/usertext"
+                android:layout_marginLeft="15dp"
+                android:text="编辑个人信息" />
+
+            <ImageView style="@style/img_arrow" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout style="@style/wrap_layout" >
+
+        <!-- 全圆角 -->
+
+        <LinearLayout
+            android:id="@+id/set_account"
+            style="@style/single_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp" >
+
+            <TextView
+                style="@style/usertext"
+                android:layout_marginLeft="15dp"
+                android:text="账号与安全" />
+
+            <ImageView style="@style/img_arrow" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout style="@style/wrap_layout" >
+
+        <!-- 上圆角,清理缓存 -->
+
+        <LinearLayout
+            android:id="@+id/set_clean"
+            style="@style/top_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp" >
+
+            <TextView
+                style="@style/usertext"
+                android:layout_marginLeft="15dp"
+                android:text="清理缓存" />
+
+            <TextView
+                android:id="@+id/tv_personal_setting_cache_size"
+                style="@style/usertext"
+                android:layout_marginLeft="15dp"
+                android:gravity="right"
+                android:text="10M"
+                android:textColor="@color/tv_cache_size_bg" />
+        </LinearLayout>
+        <!-- 分割线 -->
+
+        <View
+            style="@style/bg_line"
+            android:layout_marginLeft="15dp" />
+
+        <!-- 无圆角 -->
+
+        <LinearLayout
+            android:id="@+id/set_about_us"
+            style="@style/mid_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp" >
+
+            <TextView
+                style="@style/usertext"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="关于我们" />
+
+            <ImageView style="@style/img_arrow" />
+        </LinearLayout>
+
+        <!-- 分割线 -->
+
+        <View
+            style="@style/bg_line"
+            android:layout_marginLeft="15dp" />
+
+        <!-- 下圆角 -->
+
+        <LinearLayout
+            android:id="@+id/set_problem"
+            style="@style/bottom_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp" >
+
+            <TextView
+                style="@style/usertext"
+                android:layout_marginLeft="15dp"
+                android:text="问题反馈" />
+
+            <ImageView style="@style/img_arrow" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 全圆角 ，退出登录 -->
+
+    <LinearLayout
+        style="@style/wrap_layout"
+        android:orientation="vertical" >
+
+         <LinearLayout
+            android:id="@+id/set_exit"
+            style="@style/single_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp" >
+
+            <TextView
+                style="@style/usertext"
+                android:gravity="center"
+                android:text="退出登录" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

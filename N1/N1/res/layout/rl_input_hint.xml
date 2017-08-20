@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <EditText
+        android:id="@+id/et_inputhint_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:drawablePadding="20dp"
+        android:hint="用户名"
+        android:padding="5dp"
+        android:singleLine="true"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_inputhint_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="请输入用户名"
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
+
+</RelativeLayout>

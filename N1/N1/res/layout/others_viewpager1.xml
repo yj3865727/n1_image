@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/others_vp_lv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="3dp"
+        android:gravity="center"
+        android:text="Lv1"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/others_vp_lv"
+        android:layout_centerHorizontal="true" >
+        <Button
+            android:id="@+id/btn_other_person_add_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:background="@drawable/geren_shape"
+            android:text="+关注"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+        <ImageButton
+            android:id="@+id/ibt_other_person_talk"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/geren_shape"
+            android:src="@drawable/geren_xiaoxi" />
+     
+ 
+        
+    </LinearLayout>
+
+</RelativeLayout>

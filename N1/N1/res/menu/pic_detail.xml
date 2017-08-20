@@ -1,0 +1,29 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.lequan.n1.activity.PicDetailActivity" >
+
+    <!-- 返回按钮 -->
+    <item
+        android:id="@+id/action_back"
+        android:icon="@drawable/de_actionbar_back"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:title=""/>
+    <!-- 图片详情 文字 -->
+    <item
+        android:id="@+id/pic_detaile_Text"
+        android:icon="@drawable/de_actionbar_back"
+        android:orderInCategory="100"
+        app:showAsAction="withText"
+        
+          android:title="图片详情"/>
+    <!-- 举报用户 -->
+    <item
+        android:id="@+id/action_report"
+        android:icon="@drawable/de_actionbar_back"
+        android:orderInCategory="100"
+        app:showAsAction="collapseActionView"
+          android:title=""/>
+
+</menu>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#00000000"
+    style="@style/single_layout"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/pop_layout"
+        style="@style/wrap_layout"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="match_parent"
+         android:layout_marginTop="15dp"
+         android:layout_marginBottom="15dp"
+         style="@style/usertext"
+         android:background="@null"
+         android:hint="请选择举报的原因"
+         android:layout_gravity="center" />
+		<View   style="@style/bg_line" />
+    <Button
+        android:id="@+id/toReport1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/usertext"
+        android:background="@null"
+        android:text="涉嫌抄袭" 
+        android:textColor="@color/blue"/>
+    <View   style="@style/bg_line" />
+
+    <Button
+        android:id="@+id/toReport2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/usertext"
+        android:background="@null"
+        android:textColor="@color/blue"
+        android:text="图片低俗" />
+     <View   style="@style/bg_line" />
+
+    <Button
+        android:id="@+id/toReport3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/usertext"
+        android:background="@null"
+        android:textColor="@color/blue"
+        android:text="主题不符" />
+     <View   style="@style/bg_line" />
+
+    <Button
+        android:id="@+id/toReport4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/usertext"
+        android:background="@null"
+        android:textColor="@color/blue"
+        android:text="其他" />
+        <View   style="@style/bg_line" />
+
+        <Button
+            android:id="@+id/toReport_cancel"
+            style="@style/usertext"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:text="取消"
+            android:textColor="@color/blue" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

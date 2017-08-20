@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/set_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp" 
+        android:background="@color/pink">
+
+
+        <ImageView
+            android:id="@+id/email_back_person"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:clickable="true"
+            android:src="@drawable/fanhui2x" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="重置邮箱"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:id="@+id/email_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:text="保存"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        style="@style/wrap_layout" >
+
+        <!-- 上圆角,"请输入新邮箱号" -->
+
+        <LinearLayout 
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="fill_parent"
+            style="@style/top_layout" >
+
+            <EditText
+                style="@style/usertext"
+                android:id="@+id/email_new"
+                android:layout_weight="0.3"
+                android:background="@null"
+                android:hint="请输入新邮箱号" />
+
+            <TextView
+                android:id="@+id/tip_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:textColor="@color/red"/>
+
+        </LinearLayout>
+        <!-- 分割线 -->
+
+        <View style="@style/bg_line" />
+
+        <!-- 下圆角 ，"请输入登录密码" -->
+
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            style="@style/bottom_layout" >
+
+            <EditText
+                android:id="@+id/email_pass"
+                style="@style/usertext"
+                android:layout_weight="0.3"
+                android:background="@null"
+                android:hint="请输入登录密码"
+                android:inputType="textPassword" />
+
+            <TextView
+                android:id="@+id/tip_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:textColor="@color/red" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,145 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+
+
+
+
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+
+
+
+
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="actionBarStyle">@style/my_actionbar_style</item>
+    </style>
+
+    <style name="rb_main_style">
+        <item name="android:background">@drawable/rb_main_bg</item>
+       <!--  <item name ="android:textColor">@drawable/text_check</item> -->
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="my_actionbar_style" parent="@style/Base.Widget.AppCompat.ActionBar">
+        <item name="background">@color/pink</item>
+        <item name="contentInsetStart">0dp</item>
+        <item name="contentInsetEnd">0dp</item>
+    </style>
+
+    <style name="homt_lv_item_tv_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawablePadding">6dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <!-- 共用层样式 -->
+    <style name="base_layout">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">6dp</item>
+        <item name="android:paddingLeft">3dp</item>
+        <item name="android:paddingRight">3dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <!-- 全圆角样式 -->
+    <style name="friend_layout" parent="base_layout">
+        <item name="android:background">@drawable/friend_listview_shape</item>
+    </style>
+    <!-- friend页文本样式 -->
+    <style name="zhuti">
+        <item name="android:textSize">10dp</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+    <!-- 自定义进度条 -->
+    <style name="ProgressBar_Mini" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:maxHeight">50dip</item>
+        <item name="android:minHeight">8dip</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
+        <item name="android:progressDrawable">@drawable/progressbar_mini</item>
+    </style>
+    <!-- 最外层样式 -->
+    <style name="wrap_layout">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:padding">1px</item>
+        <item name="android:background">@drawable/bg_layout_shape</item>
+    </style>
+    <!-- 全圆角样式 -->
+    <style name="single_layout" parent="base_layout">
+        <item name="android:background">@drawable/single_layout_selector</item>
+    </style>
+    <!-- textview样式 -->
+    <style name="usertext">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/text_clo</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+    <!-- 文本右边箭头样式 -->
+    <style name="img_arrow">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:src">@drawable/setting_arrow</item>
+    </style>
+    <!-- 上圆角样式 -->
+    <style name="top_layout" parent="base_layout">
+        <item name="android:background">@drawable/top_layout_selector</item>
+    </style>
+
+    <!-- 无圆角样式 -->
+    <style name="mid_layout" parent="base_layout">
+        <item name="android:background">@drawable/mid_layout_selector</item>
+    </style>
+
+    <!-- 下圆角样式 -->
+    <style name="bottom_layout" parent="base_layout">
+        <item name="android:background">@drawable/bottom_layout_selector</item>
+    </style>
+    <!-- view分割线样式 -->
+    <style name="bg_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/border_clo</item>
+    </style>
+
+    <style name="PopupAnimation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+    </style>
+      <style name="PicPopupAnimation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/pic_pushu_bottom_in</item>
+    </style>
+
+</resources>

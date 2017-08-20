@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="InputHintView">
+        <attr name="hintBefore" format="string" />
+        <attr name="hintAfter" format="string" />
+        <attr name="hint" format="string" />
+        <attr name="drawableLeft" format="reference" />
+        <attr name="android:inputType" />
+    </declare-styleable>
+    <declare-styleable name="AutoScaleView">
+        <attr name="relative">
+            <enum name="RELATIVE_WIDTH" value="0" />
+            <enum name="RELATIVE_HEIGHT" value="1" />
+        </attr>
+        <attr name="scale" format="float" />
+    </declare-styleable>
+
+    <attr name="borderRadius" format="dimension" />
+    <attr name="type">
+        <enum name="circle" value="0" />
+        <enum name="round" value="1" />
+    </attr>
+
+    <declare-styleable name="RoundImageViewByXfermode">
+        <attr name="borderRadius" />
+        <attr name="type" />
+    </declare-styleable>
+    <declare-styleable name="RoundImageView">
+        <attr name="borderRadius" />
+        <attr name="type" />
+    </declare-styleable>
+
+</resources>

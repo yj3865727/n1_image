@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/personal_vp_score"
+        android:layout_width="110dp"
+        android:layout_height="15dp"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_shape"
+        android:gravity="right"
+        android:text="24.88" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="55dp"
+        android:layout_height="15dp"
+        android:layout_alignLeft="@+id/personal_vp_score"
+        android:layout_alignTop="@+id/personal_vp_score"
+        android:background="@drawable/lv_shape" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/view1"
+        android:gravity="center"
+        android:text="ID: "
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/personal_vp_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/personal_vp_score"
+        android:layout_alignRight="@+id/personal_vp_score"
+        android:layout_toRightOf="@+id/textView1"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+
+</RelativeLayout>

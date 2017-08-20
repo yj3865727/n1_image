@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/btn_style_alert_dialog_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp" >
+
+        <TextView
+            android:id="@+id/tv_address_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="取消"
+            android:textColor="#0000ff"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_address_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:text="确定"
+            android:textColor="#0000ff"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <antistatic.spinnerwheel.WheelVerticalView
+            android:id="@+id/wvl_provence"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp" />
+
+        <antistatic.spinnerwheel.WheelVerticalView
+            android:id="@+id/wvl_city"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>

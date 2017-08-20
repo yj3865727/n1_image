@@ -1,0 +1,60 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/friend_title_rl"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:background="@color/pink" >
+
+            <TextView
+                android:id="@+id/friend_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="朋友"
+                android:textColor="#FBFBFB"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:id="@+id/friend_title_addfriend_img"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:src="@drawable/friend_add3x" />
+        </RelativeLayout>
+        <!--
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/refresh_friend_pic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+               </android.support.v4.widget.SwipeRefreshLayout>
+        -->
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/friend_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+        </com.handmark.pulltorefresh.library.PullToRefreshListView>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/friend_pic_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+</FrameLayout>

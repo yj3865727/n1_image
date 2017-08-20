@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lequan.n1.activity"
+    android:versionCode="3"
+    android:versionName="3.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 获取机型信息权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+
+    <!-- 查看 Wi-Fi 状态 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 查看网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <!-- 录音 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 控制振动器 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 防止设备休眠 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <application
+        android:name="com.lequan.n1.N1Application"
+        android:allowBackup="true"
+        android:icon="@drawable/n1_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".SplashActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 向导界面 -->
+        <activity android:name="com.lequan.n1.activity.GuideActivity" />
+        <!-- 主界面 -->
+        <activity
+            android:name="com.lequan.n1.activity.MainActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="io.rong.fast"
+                    android:pathPrefix="/conversationlist"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+
+        <!-- 会话页面 -->
+        <activity android:name="com.lequan.n1.activity.ConversationActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.lequan.n1.activity"
+                    android:pathPrefix="/conversation/"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name="com.lequan.n1.activity.ImageGridActivity" android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lequan.n1.activity.TestPicActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lequan.n1.activity.PhotoActivity"
+            android:screenOrientation="portrait" />
+        
+        <activity
+            android:name="com.lequan.n1.activity.AlbumActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.lequan.n1.activity.ImageFile" >
+        </activity>
+        <activity
+            android:name="com.lequan.n1.activity.ShowAllPhoto" >
+        </activity>
+        <activity
+            android:name="com.lequan.n1.activity.GalleryActivity">
+        </activity>
+        <activity
+            android:name="com.lequan.n1.activity.OthersActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.lequan.n1.activity.PersonalSettingPassword"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.lequan.n1.activity.PersonalSettingEmail"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.lequan.n1.activity.PersonalSettingWeixinPay"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.lequan.n1.activity.PersonalSettingZhifubao"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        
+        <activity
+            android:name="com.lequan.n1.activity.PersonalSettingActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.lequan.n1.activity.PersonalSettingAccountandsafety"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.lequan.n1.activity.PersonalSettingAboutus"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.lequan.n1.activity.PersonalRewardActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.lequan.n1.activity.PersonalSettingDataActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <activity android:name="com.lequan.n1.activity.HomeDetailsActivity" >
+        </activity>
+        <!-- 个人问题反馈 -->
+        <activity
+            android:name="com.lequan.n1.activity.CheckImageActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 个人问题反馈 -->
+        <activity
+            android:name="com.lequan.n1.activity.PersonalSettingFeedback"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+
+        <!-- 首页轮播点击进入 -->
+        <activity
+            android:name="com.lequan.n1.activity.HomeTitleActivity2"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.lequan.n1.activity.HomeTitleActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+
+        <!-- 用户登录 -->
+        <activity
+            android:name="com.lequan.n1.activity.LoginActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <!-- 用户注册 -->
+        <activity
+            android:name="com.lequan.n1.activity.RegisterActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <!-- 通知信息详情 -->
+        <activity android:name="com.lequan.n1.activity.MessageNoticeDetailActivity" />
+        <!-- 添加好友 -->
+        <activity
+            android:name="com.lequan.n1.activity.AddFriendActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <!-- 图片详情 -->
+        <activity
+            android:name="com.lequan.n1.activity.PicDetailActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 点赞列表 -->
+        <activity
+            android:name="com.lequan.n1.activity.PraiseListActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <!-- 发布作品 -->
+        <activity android:name="com.lequan.n1.activity.PublishWorkActivity" 
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name="com.lequan.n1.activity.PublishWorkShowPhotos"/>
+
+        <!-- begin imlib request -->
+        <service
+            android:name="io.rong.push.PushService"
+            android:process="io.rong.push" > <!-- Waring: The name of the push process can't be changed!!! -->
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="io.rong.push" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="io.rong.push.CommandService"
+            android:process="io.rong.push" > <!-- Waring: The name of the push process can't be changed!!! -->
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="io.rong.command" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="io.rong.push.PushReceiver"
+            android:process="io.rong.push" > <!-- Waring: The name of the push process can't be changed!!! -->
+            <intent-filter>
+                <action android:name="io.rong.imlib.action.push.heartbeat" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="io.rong.imkit.tools.SelectPictureActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="io.rong.imkit.tools.PreviewPictureActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="io.rong.imkit.tools.RongWebviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="io.rong.imkit.widget.provider.TakingPicturesActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="io.rong.imlib.ipc.RongService"
+            android:process=":ipc" >
+        </service>
+        <service android:name="io.rong.imlib.ReConnectService" />
+
+        <receiver android:name="io.rong.imlib.ConnectChangeReceiver" />
+        <receiver android:name="io.rong.imlib.ipc.PushMessageReceiver" >
+            <intent-filter>
+                <action android:name="io.rong.push.message" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="io.rong.imlib.HeartbeatReceiver"
+            android:process=":ipc" />
+
+        <meta-data
+            android:name="RONG_CLOUD_APP_KEY"
+            android:value="y745wfm84p3gv" />
+
+        <!-- end -->
+       <!-- share sdk -->
+       <activity android:name="com.mob.tools.MobUIShell" 
+           android:theme="@android:style/Theme.Translucent.NoTitleBar" 
+           android:configChanges="keyboardHidden|orientation|screenSize" 
+           android:windowSoftInputMode="stateHidden|adjustResize"> 
+           <intent-filter> <data android:scheme="tencent1104772337"/> 
+               <action android:name="android.intent.action.VIEW"/> 
+               <category android:name="android.intent.category.BROWSABLE"/> 
+               <category android:name="android.intent.category.DEFAULT"/> 
+               </intent-filter> 
+<!-- 调用新浪原生SDK，需要注册的回调activity -->
+
+     </activity> 
+<!-- 微信分享回调 -->
+ <activity android:name="com.lequan.n1.activity.wxapi.WXEntryActivity" 
+     android:theme="@android:style/Theme.Translucent.NoTitleBar"
+     android:configChanges="keyboardHidden|orientation|screenSize"
+     android:exported="true"/>
+ </application>
+ 
+
+</manifest>

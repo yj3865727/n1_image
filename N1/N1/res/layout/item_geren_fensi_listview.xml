@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fensi_personal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+ <!--    <View
+        android:layout_height="1dp"
+        android:background="@drawable/line_shape" /> -->
+
+  
+
+        <com.lequan.n1.view.XCRoundRectImageView
+            android:id="@+id/geren_fensi_pic"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/geren_guanzhu" />
+         <TextView
+            style="@style/bg_line"
+            android:layout_height="1dp"
+            android:layout_below="@+id/geren_fensi_pic"
+            android:layout_marginTop="10dp" />
+
+         <TextView
+             android:id="@+id/geren_fensi_name"
+             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="23dp"
+            android:layout_centerVertical="true"
+             android:layout_toRightOf="@+id/geren_fensi_pic"
+             android:text="关注人的账号名"
+             android:textColor="#000000" />
+
+         <Button
+             android:id="@+id/geren_fensi"
+             android:layout_width="70dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+             android:layout_alignTop="@+id/geren_fensi_pic"
+             android:layout_marginRight="18dp"
+             android:background="@drawable/geren_guanzhu_shape"
+             android:text="关注"
+             android:textColor="@color/white"
+             android:textSize="14sp" />
+
+</RelativeLayout>

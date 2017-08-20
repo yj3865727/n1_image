@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#00000000"
+    style="@style/single_layout"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/pop_layout"
+        style="@style/wrap_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+    <Button
+        android:id="@+id/pic_toReport"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/usertext"
+        android:background="@null"
+        android:textColor="@color/red"
+        android:text="举报该用户" />
+    </LinearLayout>
+      <LinearLayout
+            style="@style/wrap_layout"
+            android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/pic_cancel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/usertext"
+        android:background="@null"
+        android:textColor="@color/blue"
+        android:text="取消" />
+    </LinearLayout>
+    
+
+</LinearLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/srl_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.lequan.n1.view.PinnedSectionListView
+            android:id="@+id/pslv_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@null"
+            android:listSelector="@android:color/transparent" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <!-- 后面的覆盖在前面的之上 -->
+    <RelativeLayout
+        android:id="@+id/rl_home_guide_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#55000000" >
+
+        <ImageView
+            android:id="@+id/iv_guide_wait_yout_get"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="120dp"
+            android:src="@drawable/guide_wait_yout_get" />
+
+         <ImageView
+            android:id="@+id/iv_guide_residue_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="25dp"
+            android:src="@drawable/guide_residue_time"
+            android:visibility="invisible" />
+        
+        <ImageView
+            android:id="@+id/iv_guide_reward_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp"
+            android:layout_above="@id/iv_guide_residue_time"
+            android:layout_marginBottom="30dp"
+            android:src="@drawable/guide_reward_total"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/praise_list_title_rl"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/pink" >
+
+        <ImageView
+            android:id="@+id/praise_list_back_img"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/fanhui2x" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/praise_list"
+            android:textColor="#FBFBFB"
+            android:textSize="18dp" />
+    </RelativeLayout>
+
+
+        <ListView
+              android:layout_below="@id/praise_list_title_rl"
+            android:id="@+id/praise_list_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none" 
+           android:divider="#00000000">
+        </ListView>
+
+
+</RelativeLayout>

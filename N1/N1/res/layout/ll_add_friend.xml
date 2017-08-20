@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp" >
+
+        <ImageView
+            android:id="@+id/iv_add_friend_head"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/logo_placeholder2x" />
+
+        <TextView
+            android:id="@+id/tv_add_friend_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:text="Lucy"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/iv_add_friend_sex"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/friend_nan" />
+
+        <TextView
+            android:id="@+id/tv_add_friend_level"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:drawableRight="@drawable/message_notice_arrow"
+            android:gravity="center_vertical"
+            android:text="Lv1"
+            android:textColor="#77ff0000"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <include layout="@layout/gray_line" />
+
+</LinearLayout>

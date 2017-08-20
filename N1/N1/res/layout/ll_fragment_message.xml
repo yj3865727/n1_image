@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <RadioGroup
+        android:id="@+id/rg_message"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/border_radius_message_rg_bg"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rbt_message_personal"
+            style="@style/rb_main_style"
+            android:layout_margin="1dp"
+            android:checked="true"
+            android:gravity="center"
+            android:text="私聊"
+            />
+
+        <RadioButton
+            android:id="@+id/rbt_message_notice"
+            style="@style/rb_main_style"
+            android:layout_margin="1dp"
+            android:gravity="center"
+            android:text="通知"/>
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/fl_message_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp" />
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ListView
+        android:id="@+id/lv_message_notice_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:listSelector="@android:color/transparent"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_message_notice_detail_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/message_notice_detail_hint"
+        android:textColor="@android:color/black"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/pb_message_notice_detail_load"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="#77000000"
+        android:padding="20dp" />
+
+</RelativeLayout>

@@ -1,0 +1,133 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/zhuce2_0"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp" >
+
+        <ImageView
+            android:id="@+id/iv_registe_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/de_actionbar_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="注册"
+            android:textColor="#ffffff"
+            android:textSize="22dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/register_input_bg"
+            android:orientation="vertical"
+            android:paddingBottom="10dp" >
+
+            <com.lequan.n1.view.InputHintView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/iht_registe_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                app:drawableLeft="@drawable/login_nicheng"
+                app:hint="用户名"
+                app:hintAfter=""
+                app:hintBefore="请输入用户名" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="@android:color/white" />
+
+            <com.lequan.n1.view.InputHintView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/iht_registe_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                app:drawableLeft="@drawable/login_password"
+                app:hint="密码"
+                app:hintAfter="6-16个字符"
+                app:hintBefore="请输入密码" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="@android:color/white" />
+
+            <com.lequan.n1.view.InputHintView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/iht_registe_repwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                app:drawableLeft="@drawable/login_password"
+                app:hint="密码"
+                app:hintAfter="6-16个字符"
+                app:hintBefore="请输入密码" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="@android:color/white" />
+
+            <com.lequan.n1.view.InputHintView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/iht_registe_nikename"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                app:drawableLeft="@drawable/login_nicheng"
+                app:hint="昵称"
+                app:hintAfter=""
+                app:hintBefore="请输入昵称" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="@android:color/white" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_registe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/register_btn_bg"
+            android:text="注册"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/signup_agreeTerms"
+            android:textColor="#ffffff"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp" 
+        android:background="@color/pink">
+
+        <ImageView
+            android:id="@+id/iv_feedback_back"
+            android:layout_width="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_height="22dp"
+            android:src="@drawable/fanhui2x" />
+
+        <TextView
+            android:id="@+id/tv_feedback_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:text="发送" />
+
+        <TextView
+            android:id="@+id/tv_feedback_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:text="意见反馈" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/et_feedback_message"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/background_shape_yuan"
+        android:gravity="top"
+        android:hint="请你在这里写出您对N1的意见或建议，我们将会不断改进" />
+
+    <EditText
+        android:id="@+id/et_feedback_tellphone"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/background_shape_yuan"
+        android:hint="手机号/QQ/微信(选填)" />
+
+</LinearLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rl_message_notice_dianzan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rl_message_notice_bg"
+            android:padding="15dp" >
+
+            <TextView
+                android:id="@+id/tv_message_notice_dianzan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/message_notice_dianzan"
+                android:drawablePadding="20dp"
+                android:gravity="center"
+                android:text="赞" />
+
+            <TextView
+                android:id="@+id/tv_message_notice_dianzan_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:drawableRight="@drawable/message_notice_arrow"
+                android:gravity="center"
+                android:textColor="#ff0000" />
+        </RelativeLayout>
+
+        <include layout="@layout/gray_line" />
+
+        <RelativeLayout
+            android:id="@+id/rl_message_notice_pinglun"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rl_message_notice_bg"
+            android:padding="15dp" >
+
+            <TextView
+                android:id="@+id/tv_message_notice_pinglun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/message_notice_pinglun"
+                android:drawablePadding="20dp"
+                android:gravity="center"
+                android:text="评论" />
+
+            <TextView
+                android:id="@+id/tv_message_notice_pinglun_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:drawableRight="@drawable/message_notice_arrow"
+                android:gravity="center"
+                android:textColor="#ff0000" />
+        </RelativeLayout>
+
+        <include layout="@layout/gray_line" />
+
+        <RelativeLayout
+            android:id="@+id/rl_message_notice_guanzhu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rl_message_notice_bg"
+            android:padding="15dp" >
+
+            <TextView
+                android:id="@+id/tv_message_notice_guanzhu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/message_notice_guanzhu"
+                android:drawablePadding="20dp"
+                android:gravity="center"
+                android:text="关注我的" />
+
+            <TextView
+                android:id="@+id/tv_message_notice_guanzhu_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:drawableRight="@drawable/message_notice_arrow"
+                android:gravity="center"
+                android:textColor="#ff0000" />
+        </RelativeLayout>
+
+        <include layout="@layout/gray_line" />
+
+        <LinearLayout
+            android:id="@+id/ll_message_notice_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical" />
+    </LinearLayout>
+
+</ScrollView>
